@@ -7,7 +7,13 @@
 		<link rel="stylesheet" href="css/my.css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript">
+			/*
+			 功能说明：点击缩略图列表，更换大图的图片
+			 */
 			$(document).ready(function(){
+				$("input:text:first").val("潘洪涛");
+				$("input:text:eq(1)").val("180216155");
+				
 				$("img").click(function(){
 					var src=$(this).attr("src");
 					$("#showbig").attr("src",src);
@@ -17,6 +23,18 @@
 		
 	</head>
 	<body>
+		<div class="am-form-group">
+      	<label for="doc-ipt-email-1">姓名：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的姓名">
+      	
+    	</div>
+    	
+    	<div class="am-form-group">
+      	<label for="doc-ipt-email-1">学号：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的长学号">
+      	
+    	</div>
+		
 		<ul class="am-avg-sm-3 am-thumbnails">
 		  <li><img class="am-thumbnail" src="img/b1.jpg" /></li>
 		  <li><img class="am-thumbnail" src="img/b2.jpg" /></li>

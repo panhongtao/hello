@@ -7,7 +7,13 @@
 		<link rel="stylesheet" href="css/my.css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript">
+			/*
+			 功能说明：点击按钮则显示图片或者隐藏所有图片，同时按钮文字也对应变化
+			 */
 			$(document).ready(function(){
+				$("input:text:first").val("潘洪涛");
+				$("input:text:eq(1)").val("180216155");
+				
 				$("button").click(function(){
 					$("ul").slideToggle(1000);
 					if($(this).text()=="显示图片"){
@@ -21,6 +27,19 @@
 		
 	</head>
 	<body>
+		
+		<div class="am-form-group">
+      	<label for="doc-ipt-email-1">姓名：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的姓名">
+      	
+    	</div>
+    	
+    	<div class="am-form-group">
+      	<label for="doc-ipt-email-1">学号：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的长学号">
+      	
+    	</div>
+
 		<button type="button" class="am-btn am-btn-primary am-btn-block am-radius">显示图片</button>
 		<ul class="am-avg-sm-3 am-thumbnails">
 		  <li><img class="am-thumbnail" src="img/b1.jpg" /></li>

@@ -8,18 +8,25 @@
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript">
 			/*
-			 功能说明：点击按钮对应的行，弹出对话框，提示本行内容
+			 功能说明：点击“全选”，则选中或取消选中列表中所有行
 			 */
-		
 			$(document).ready(function(){
 				$("input:text:first").val("潘洪涛");
 				$("input:text:eq(1)").val("180216155");
 				
-				var getText="";
-				$("tr").click(function(){
-					getText=$(this).text();
-					alert(getText);
-				})				
+				
+				$("input:checkbox:first").click(function(){
+					if($("input:checkbox:first").prop("checked")){
+						$("input:checkbox").each(function(){
+							$(this).attr("checked","checked");
+						})
+					}else{
+						$("input:checkbox").each(function(){
+							$(this).attr("checked",false);
+						})
+					}
+					
+				})
 			})
 		</script>
 		
@@ -40,6 +47,7 @@
 		<table class="am-table">
 		    <thead>
 		        <tr>
+		            <th><input type="checkbox" >全选</th>
 		            <th>网站名称</th>
 		            <th>网址</th>
 		            <th>创建时间</th>
@@ -47,37 +55,36 @@
 		    </thead>
 		    <tbody>
 		        <tr>
+		        	 <td><input type="checkbox"></td>
+		            <td>Amaze UI</td>
+		            <td>http://amazeui.org</td>
+		            <td>2012-10-01</td>
+		        </tr>
+		       <tr>
+		        	 <td><input type="checkbox"></td>
 		            <td>Amaze UI</td>
 		            <td>http://amazeui.org</td>
 		            <td>2012-10-01</td>
 		        </tr>
 		        <tr>
-		            <td>Bootstrap</td>
+		        	 <td><input type="checkbox"></td>
+		            <td>Amaze UI</td>
 		            <td>http://amazeui.org</td>
 		            <td>2012-10-01</td>
 		        </tr>
 		        <tr>
-		            <td>Foundation</td>
+		        	 <td><input type="checkbox"></td>
+		            <td>Amaze UI</td>
 		            <td>http://amazeui.org</td>
 		            <td>2012-10-01</td>
 		        </tr>
 		        <tr>
-		            <td>Semantic UI</td>
-		            <td>http://amazeui.org</td>
-		            <td>2012-10-01</td>
-		        </tr>
-		        <tr>
-		            <td>Pure</td>
-		            <td>http://amazeui.org</td>
-		            <td>2012-10-01</td>
-		        </tr>
-		        <tr>
-		            <td>UIkit</td>
+		        	 <td><input type="checkbox"></td>
+		            <td>Amaze UI</td>
 		            <td>http://amazeui.org</td>
 		            <td>2012-10-01</td>
 		        </tr>
 		    </tbody>
 		</table>
-		
 	</body>
 </html>
