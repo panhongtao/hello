@@ -8,21 +8,38 @@
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 	
 		<script>       
-	        var time;	        
+	        /*
+			 功能说明：页面打开显示广告图片5秒钟后自动关闭
+			 */
+	        var time;
 	        $(function(){
-	            
+	            $("input:text:first").val("潘洪涛");
+				$("input:text:eq(1)").val("180216155");
+				
 	            time = setTimeout("hideAd()",5000);
 	        });
 	        
 	        //隐藏函数
 	        function hideAd() {
-	            $("#ad").hide(5000);
+	            $("#ad").hide(2000);
 	            clearTimeout(time);
 	        }
     	</script>
 		
 	</head>
 	<body>
+		<div class="am-form-group">
+      	<label for="doc-ipt-email-1">姓名：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的姓名">
+      	
+    	</div>
+    	
+    	<div class="am-form-group">
+      	<label for="doc-ipt-email-1">学号：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的长学号">
+      	
+    	</div>
+		
 		<article class="am-article">
 		  <div class="am-article-hd">
 		    <h1 class="am-article-title">放鹤亭记</h1>

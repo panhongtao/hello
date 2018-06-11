@@ -7,7 +7,13 @@
 		<link rel="stylesheet" href="css/my.css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript">
+			/*
+			 功能说明：点击“添加”按钮将文本框中的内容添加到表格中
+			 */
 			$(document).ready(function(){
+				$("input:text:first").val("潘洪涛");
+				$("input:text:eq(1)").val("180216155");
+				
 				$("button").click(function(){
 					var sitename=$("#sitename").val();
 					var siteurl=$("#siteurl").val();
@@ -22,6 +28,18 @@
 		
 	</head>
 	<body>
+		<div class="am-form-group">
+      	<label for="doc-ipt-email-1">姓名：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的姓名">
+      	
+    	</div>
+    	
+    	<div class="am-form-group">
+      	<label for="doc-ipt-email-1">学号：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的长学号">
+      	
+    	</div>
+		
 		<div class="am-g">
 		  <div class="am-u-md-8 am-u-sm-centered">
 		    <form class="am-form">

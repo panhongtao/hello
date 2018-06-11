@@ -7,7 +7,13 @@
 		<link rel="stylesheet" href="css/my.css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript">
+			/*
+			 功能说明：鼠标滑过图片时，改变图片的边框，滑出时恢复边框
+			 */
 			$(document).ready(function(){
+				$("input:text:first").val("潘洪涛");
+				$("input:text:eq(1)").val("180216155");
+				
 				$("img").mouseover(function(){
 					$(this).addClass("showboder");
 				});
@@ -18,6 +24,18 @@
 		</script>
 	</head>
 	<body>
+		<div class="am-form-group">
+      	<label for="doc-ipt-email-1">姓名：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的姓名">
+      	
+    	</div>
+    	
+    	<div class="am-form-group">
+      	<label for="doc-ipt-email-1">学号：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的长学号">
+      	
+    	</div>
+		
 		<ul class="am-avg-sm-3 am-thumbnails">
 		  <li><img class="am-thumbnail" src="img/s1.jpg" /></li>
 		  <li><img class="am-thumbnail" src="img/s2.jpg" /></li>

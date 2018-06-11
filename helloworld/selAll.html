@@ -7,7 +7,14 @@
 		<link rel="stylesheet" href="css/my.css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript">
+			/*
+			 功能说明：点击“全选”，则选中或取消选中列表中所有行
+			 */
 			$(document).ready(function(){
+				$("input:text:first").val("潘洪涛");
+				$("input:text:eq(1)").val("180216155");
+				
+				
 				$("input:checkbox:first").click(function(){
 					if($("input:checkbox:first").prop("checked")){
 						$("input:checkbox").each(function(){
@@ -25,7 +32,17 @@
 		
 	</head>
 	<body>
-		
+		<div class="am-form-group">
+      	<label for="doc-ipt-email-1">姓名：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的姓名">
+      	
+    	</div>
+    	
+    	<div class="am-form-group">
+      	<label for="doc-ipt-email-1">学号：</label>
+      	<input type="text" class="" id="youname" placeholder="输入你的长学号">
+      	
+    	</div>
 		
 		<table class="am-table">
 		    <thead>
