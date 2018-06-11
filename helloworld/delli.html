@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>点击隐藏</title>
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<link rel="stylesheet" href="css/my.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$("button").click(function(){
+					$("input:checkbox:checked").parent().parent().remove()
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		
+		
+		<table class="am-table">
+		    <thead>
+		        <tr>
+		            <th><input type="checkbox" >全选</th>
+		            <th>网站名称</th>
+		            <th>网址</th>
+		            <th>创建时间</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		        	 <td><input type="checkbox"></td>
+		            <td>Amaze UI</td>
+		            <td>http://amazeui.org</td>
+		            <td>2012-10-01</td>
+		        </tr>
+		       <tr>
+		        	 <td><input type="checkbox"></td>
+		            <td>jquery</td>
+		            <td>http://jquery.com</td>
+		            <td>2012-10-01</td>
+		        </tr>
+		        <tr>
+		        	<td><input type="checkbox"></td>
+		            <td>Boozi</td>
+		            <td>http://boozi.org</td>
+		            <td>2012-10-01</td>
+		        </tr>
+		        
+		    </tbody>
+		</table>
+		<button type="submit" class="am-btn am-btn-default">删除</button>
+	</body>
+</html>

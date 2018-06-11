@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>点击隐藏</title>
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<link rel="stylesheet" href="css/my.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+					var sitename=$("#sitename").val();
+					var siteurl=$("#siteurl").val();
+					var createtime=$("#createtime").val();
+					
+					var mytr="<tr>" + "<td>" +sitename+"</td>" + "<td>" +siteurl +"</td>" +"<td>" +createtime +"</td>" +"</tr>";
+
+					$("table").append(mytr);
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		<div class="am-g">
+		  <div class="am-u-md-8 am-u-sm-centered">
+		    <form class="am-form">
+		      <fieldset class="am-form-set">
+		        <input type="text" id="sitename" placeholder="网站名称">
+		        <input type="text" id="siteurl" placeholder="网址">
+		        <input type="email" id="createtime" placeholder="创建时间">
+		      </fieldset>
+		      <button type="submit" class="am-btn am-btn-primary am-btn-block">添加</button>
+		    </form>
+		  </div>
+		</div>
+		
+		<table class="am-table">
+		    <thead>
+		        <tr>
+		            <th>网站名称</th>
+		            <th>网址</th>
+		            <th>创建时间</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		            <td>Amaze UI</td>
+		            <td>http://amazeui.org</td>
+		            <td>2012-10-01</td>
+		        </tr>
+		       
+		    </tbody>
+		</table>
+	</body>
+</html>
